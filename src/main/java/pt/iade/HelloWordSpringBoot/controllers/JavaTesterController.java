@@ -16,6 +16,12 @@ public class JavaTesterController {
     private String ucs[] = { "OOP", "DB", "OS", "DM", "CK", "TE1" };
     private double grades[] = { 20, 20, 18, 16, 16, 14 };
 
+    @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String getGreeting() {
+        logger.info("Saying Java Tester");
+        return "Java Tester";
+    }
+
     @GetMapping(path = "/author", produces = MediaType.APPLICATION_JSON_VALUE)
     public String getAuthor() {
         String name = "Willian SantaAna";
